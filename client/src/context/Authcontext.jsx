@@ -15,7 +15,9 @@ export function AuthProvider({ children }) {
       return
     }
 
-    fetch("http://localhost:5000/api/auth/profile", {
+    const API = import.meta.env.VITE_API_URL;
+
+    fetch(`${API}/api/auth/profile`, {
       headers: { Authorization: "Bearer " + token }
     })
       .then(res => {
