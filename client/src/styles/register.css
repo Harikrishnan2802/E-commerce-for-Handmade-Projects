@@ -1,0 +1,135 @@
+/* ═══════════════════════════════════════════════
+   Register.css — Light Luxury Aesthetic
+   ═══════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap');
+
+.register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5e6da; /* Same as Shop BG */
+  background-image: radial-gradient(circle at 10% 20%, rgba(122, 82, 24, 0.03) 0%, transparent 50%);
+  font-family: 'Outfit', sans-serif;
+  padding: 20px;
+}
+
+.register-form {
+  position: relative;
+  padding: 3.5rem 2.5rem;
+  background: #efe0d3; /* Surface color */
+  border: 1px solid rgba(100, 70, 45, 0.12);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 40px rgba(100, 70, 45, 0.1);
+}
+
+/* Decorative Gold Accent */
+.register-form::after {
+  content: '✦';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f5e6da;
+  padding: 0 10px;
+  color: #7a5218;
+  font-size: 1.2rem;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  color: #2c1a0e;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.form-header p {
+  font-size: 0.85rem;
+  color: #8a6e5c;
+  margin-top: 8px;
+  letter-spacing: 0.05em;
+}
+
+.register-form input {
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(100, 70, 45, 0.18);
+  background: #e8d6c7;
+  color: #3d2410;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.register-form input:focus {
+  background: #fff;
+  border-color: #7a5218;
+  box-shadow: 0 0 0 4px rgba(122, 82, 24, 0.05);
+}
+
+.password-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-register {
+  margin-top: 10px;
+  padding: 1.1rem;
+  border-radius: 999px;
+  border: none;
+  background: #3d2410; /* Dark Brown */
+  color: #f5e6da;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-register:hover {
+  background: #7a5218; /* Gold on hover */
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(122, 82, 24, 0.2);
+}
+
+.login-link {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #3d2410;
+  margin-top: 5px;
+}
+
+.login-link a {
+  color: #7a5218;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.login-link a:hover {
+  border-bottom-color: #7a5218;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .register-form {
+    padding: 2.5rem 1.5rem;
+  }
+  .form-header h2 {
+    font-size: 2.2rem;
+  }
+}
