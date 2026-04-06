@@ -43,7 +43,9 @@ export function AuthProvider({ children }) {
   // SIGNUP
   const signup = async (name, email, password) => {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/register", {
+const API = import.meta.env.VITE_API_URL;
+
+const res = await fetch(`${API}/api/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullName: name, email, password })
